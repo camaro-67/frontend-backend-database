@@ -9,7 +9,7 @@ echo ("product code is $product_code\n");
 echo ("quantity is $quantity");
    class MyDB extends SQLite3 {
       function __construct() {
-         $this->open('C:\Users\vitd0145\Downloads\sqlite\sqlite\db\retail_shop.db');
+         $this->open('retail_shop.db');
       }
    }
 
