@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="stylesheet" href="add_product_warehouse.css">
+<script>
+  var id = $('#id');
+  var name = $('#name');
+  var product_code = $('#product_code');
+  var quantity = $('#quantity');
+  function addItem() {
+    var value_1 = $id.val();
+    var value_2 = $name.val();
+    var value_3 = $product_code.val();
+    var value_4 = $quantity.val();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "add_prodct_warehouse.php?id="+value_1 +
+    "name="+value_2+
+    "product_code="+value_3+
+    "quantity="+value_4, true);
+    xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active">Add product to warehouse </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="bread.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="add_product_warehouse.php">
+      <input type="text" id="id" class="fadeIn second" name="id" placeholder="Product ID">
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="Product name">
+      <input type="text" id="product_code" class="fadeIn second" name="product_code" placeholder="Product code">
+      <input type="text"  id="quantity" class="fadeIn second" name="quantity" placeholder="Product quantity"><input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <p class="underlineHover">You added : <span id="txtItem"></span></p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
